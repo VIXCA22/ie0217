@@ -41,14 +41,14 @@ main.cpp : Es el principal donde se está el menú principal y se llaman las fun
 
 ```
 
-## Fotos programa #1 
+ Fotos programa #1 
 
-![Foto1progra1](fotos%20lab4/Fotos%20programa1/foto1pro1.jpg)
+![Foto1progra1](Laboratorios/Laboratorio4/fotos%20lab4/Fotos%20programa%201/foto1pro1.jpg)
 
-![Foto2progra1](fotos%20lab4/Fotos%20programa1/foto2pro1.jpg)
+![Foto2progra1](Laboratorios/Laboratorio4/fotos%20lab4/Fotos%20programa%201/foto2pro1.jpg)
 
-## Fotos programa #2
+Fotos programa #2
 
-![Foto1progra2](fotos%20lab4/Fotos%20programa2/foto1pro2.jpg)
-![Foto2progra2](fotos%20lab4/Fotos%20programa2/foto2pro2.jpg)
-![Foto3progra2](fotos%20lab4/Fotos%20programa2/foto3pro2.jpg)
+![Foto1progra2](Laboratorios/Laboratorio4/fotos%20lab4/Fotos%20programa%202/foto1pro2.jpg)
+![Foto2progra2](Laboratorios/Laboratorio4/fotos%20lab4/Fotos%20programa%202/foto2pro2.jpg)
+![Foto3progra2](Laboratorios/Laboratorio4/fotos%20lab4/Fotos%20programa%202/foto3pro2.jpg)
