@@ -215,22 +215,23 @@ Una función amiga tiene acceso  desde el exterior a los miembros privados y pro
 La importancia es debido a que se definen en la clase y se pueden sobrescribir en la clase derivada y en la implementación del polimorfismo se utiliza de tal modo que los métodos actúen de diversas formas permitiendo que sistemas flexibles y objetos adaptados al tiempo de ejecución.
 
 
-## Código #1 
+## Código 
 
-_._
+_Nuestro código se trata sobre hacer un sistema de supermercado en donde se almacenan los productos y los clientes con sus respectivos atributos además del cálculo total de los productos que el cliente compre o añada al carrito dependiendo del cliente se hará un decuento._
 
 ### Algunos errores:
-
-
+ - Algunos errores como dejar las clases bases como privadas en lugar de protegidas por lo que daba un error al no poder acceder a la clase , por lo que lo cambié por protected para que las clases derivadas pudieran acceder.
+ - Error de jump to case label el cual se corrigio de forma que se la clase tipo puntero del cliente quedara antes del segundo switch.
+ - Error con la entrada de los contructores debido a una cofusión de atributos al no tomar en cuenta los atributos heredados en la inicialización del contructor cliente.
+ - En calcularTotal el vector que se había definido estaba definido como int y se inicializó como double para el manejo de decimales .
+ - Error en la parte de Tienda como clase , no necesitaba atributos al contructor ya que solo se tomaban los datos de los vectores de las clases cliente y producto.
 ###  Para ejecutar:
 ```cpp**
-   
+   mingw32-make run
  ```
 ### Link Doxyfile:
 
-
-
-
+supermercado-x-38bf47.netlify.app
 
 ## Autor ✒️
 
