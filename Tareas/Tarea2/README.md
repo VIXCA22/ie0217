@@ -207,7 +207,7 @@ La clase amiga es una clase en donde se  puede acceder a información de los mie
 
 17. ¿Qué es una función amiga y para qué se usa? ¿Cúal es la manera de definirla?
 
-Una función amiga tiene acceso  desde el exterior a los miembros privados y protegidos de la clase por lo que se usa para acceder especificamente a información interna para la funcionalidad del método . Se defien `friend` 
+Una función amiga tiene acceso  desde el exterior a los miembros privados y protegidos de la clase por lo que se usa para acceder especificamente a información interna para la funcionalidad del método . Se defiene `friend` 
 
 
 18. Explique la importancia de los métodos virtuales en C++ y cómo se utilizan en la implementación de polimorfismo
