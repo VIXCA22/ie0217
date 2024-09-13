@@ -1,13 +1,24 @@
 #ifndef NODOARBOL_HPP
 #define NODOARBOL_HPP
 
-//Cada nodo ocupará los punteros  del izquierdo y derecho
+/**
+ * @brief Estructura que representa un nodo en un árbol binario.
+ * 
+ * Cada nodo en el árbol ocupará un valor entero y dos punteros:
+ * - `izquierdo`: un puntero al nodo hijo izquierdo.
+ * - `derecho`: un puntero al nodo hijo derecho.
+ */
 struct NodoArbol {
-    int dato;
-    NodoArbol* izquierdo;
-    NodoArbol* derecho;
+    int dato; ///< Valor almacenado en el nodo.
+    NodoArbol* izquierdo; ///< Puntero al nodo hijo izquierdo.
+    NodoArbol* derecho; ///< Puntero al nodo hijo derecho.
 
+    /**
+     * @brief Constructor para inicializar un nodo con un valor dado.
+     * 
+     * @param valor Valor a almacenar en el nodo.
+     */
     NodoArbol(int valor) : dato(valor), izquierdo(nullptr), derecho(nullptr) {}
 };
 
-#endif
+#endif // NODOARBOL_HPP

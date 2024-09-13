@@ -5,14 +5,27 @@
 #include <string>
 #include <vector>
 
-
 #include "Cancion.hpp"
 
+/**
+ * @brief La estructura  representa un Nodo en una lista enlazada de canciones.
+ * 
+ * @details
+ * El nodo guarda un objeto de tipo `Cancion` y un puntero que apunta al siguiente nodo,
+ * por lo que permite crear una lista enlazada.
+ */
 struct Nodo {
-    Cancion cancion;  // Se crea nuestro objeto tipo canción
-    Nodo* siguiente;  //Este nodo puntero siguiente nos servira para apuntar al nodo siguiente
+    Cancion cancion; ///< Objeto que almacena la información de la canción.
+    Nodo* siguiente; ///< Puntero que apunta al siguiente nodo en la lista.
 
-    // Se inicializa el contructor de  Nodo con sus atributos respectivos para el nodo
+    /**
+     * @brief Constructor que inicializa un nodo con una canción.
+     * 
+     * @param nuevaCancion Objeto de tipo Cancion que será almacenado en el nodo.
+     * 
+     * @details
+     * El puntero `siguiente` se inicializa en `nullptr`, indicando que no hay un nodo siguiente al crear este.
+     */
     Nodo(const Cancion& nuevaCancion) : cancion(nuevaCancion), siguiente(nullptr) {}
 };
 

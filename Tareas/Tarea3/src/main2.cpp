@@ -2,8 +2,22 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 using namespace std;
 
+/**
+ * @brief Función principal del programa para manejar una lista enlazada de canciones por medio de un switch.
+ * 
+ * @details
+ * El programa realiza las diferentes opciones:
+ * - Insertar una nueva canción en la lista enlazada.
+ * - Eliminar una canción existente.
+ * - Modificar los datos de una canción.
+ * - Imprimir la lista completa de canciones.
+ * - Salir del programa.
+ * 
+ * @return int Código de retorno del programa.
+ */
 int main() {
     ListaEnlazada lista;
     int opcion, opcion2;
@@ -24,22 +38,35 @@ int main() {
         cout << "Seleccione una opción: ";
         cin >> opcion;
 
-        //Se invoca cada funcione correspondiente
+        // Se invoca cada función que le corresponda
+        /**
+         * @brief Switch que invoca las funciones correspondientes de acuerdo a cada opción.
+         * 
+         * @details
+         * El switch maneja las diferentes opciones del menú como:
+         * - Inserción de una nueva canción (al inicio, en la mitad o al final).
+         * - Eliminación de una canción especificada por nombre.
+         * - Modificación de los datos de una canción especificada.
+         * - Impresión de la lista completa de canciones.
+         * - Salida del programa.
+         */
         switch (opcion) {
-            case 1: //Se obtiene la informacion con getline guardandose cada atributo correspondiente
+            case 1: 
+                // Se obtiene la información con getline guardándose cada atributo correspondiente
                 cout << "1. Insertar canción al inicio\n";
                 cout << "2. Insertar canción en la mitad\n";
                 cout << "3. Insertar canción al final\n";
                 cout << "Seleccione una opción: ";
                 cin >> opcion2;
                 cout << "Ingrese el nombre de la canción: ";
-                cin.ignore(); //limpia el buffer
+                cin.ignore(); // limpia el buffer
                 getline(cin, nombre);
                 cout << "Ingrese el artista de la canción: ";
                 getline(cin, artista);
                 cout << "Ingrese la duración de la canción: ";
                 getline(cin, duracion);
 
+                // Switch anidado para manejar las opciones de inserción
                 switch (opcion2) {
                     case 1:
                         lista.insertarInicio(Cancion(nombre, artista, duracion));
@@ -54,13 +81,15 @@ int main() {
                         cout << "Opción inválida.\n";
                 }
                 break;
-            case 2:
+            case 2: 
+                // Elimina una canción por nombre
                 cout << "Ingrese el nombre de la canción a eliminar: ";
                 cin.ignore();
                 getline(cin,nombre);
                 lista.eliminarCancion(nombre);
                 break;
-            case 3:
+            case 3: 
+                // Modifica los datos de una canción existente
                 cout << "Ingrese el nombre de la canción a modificar: ";
                 cin.ignore();
                 getline(cin, nombre);
@@ -72,13 +101,16 @@ int main() {
                 getline(cin, duracion);
                 lista.modificarCancion(nombre, Cancion(nuevoNombre, artista, duracion));
                 break;
-            case 4:
+            case 4: 
+                // Imprime la lista de canciones
                 lista.imprimir();
                 break;
-            case 5:
+            case 5: 
+                // Sale del programa
                 cout << "Saliendo...\n";
                 break;
-            default:
+            default: 
+                // Manejo de opción inválida
                 cout << "Opción inválida.\n";
         }
     } while (opcion != 5);

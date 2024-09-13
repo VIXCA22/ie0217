@@ -1,12 +1,20 @@
-#include "ArbolBinarioBusqueda.hpp"
-#include <iostream>
-
-using namespace std;
-
+/**
+ * @brief Programa principal para la gestión de un árbol binario de búsqueda.
+ * 
+ * Este programa permite al usuario:
+ * - Insertar un nodo en el árbol.
+ * - Eliminar un nodo del árbol.
+ * - Imprimir el árbol en orden.
+ * - Calcular la altura del árbol.
+ * - Verificar si el árbol está balanceado.
+ * - Salir del programa.
+ * 
+ * Se inicializan algunos valores del nodo del árbol.
+ */
 int main() {
     ArbolBinarioBusqueda arbol;
 
-    //Inicialización del árbol con algunos nodos
+    // Inicialización del árbol con algunos nodos
     NodoArbol* raiz = new NodoArbol(15);
     raiz->izquierdo = new NodoArbol(10);
     raiz->derecho = new NodoArbol(20);
@@ -16,9 +24,8 @@ int main() {
     raiz->izquierdo->derecho = new NodoArbol(12);   
 
     arbol.establecerRaiz(raiz);
-    //se hace esta utlización debido a que se debe manipular manualmente nuesto arbol para introducir los nodos con valores
-    //preestablecidos 
-    
+    // Se hace esta utilización debido a que se debe manipular manualmente nuestro árbol para introducir los nodos con valores preestablecidos 
+
     int opcion, valor;
     do {
         cout << "1. Insertar un nodo\n";
@@ -62,7 +69,6 @@ int main() {
                 cout << "Opción inválida.\n";
         }
     } while (opcion != 6);
-
 
     return 0;
 }
