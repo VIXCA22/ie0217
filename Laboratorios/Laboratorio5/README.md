@@ -29,8 +29,8 @@ main.cpp : Es el principal donde se está el menú principal y se llaman las fun
 
 ### Fotos programa  
 
-![Foto1progra1](\imagen\Captura de pantalla 2024-09-13 183357.png)
+![Foto1progra1](repos/ie0217/Laboratorios/Laboratorio5/imagen/Captura de pantalla 2024-09-13 183357.png)
 
-![FotoGrafica](\imagen\Captura de pantalla 2024-09-13 184802.png)
+![FotoGrafica](repos/ie0217/Laboratorios/Laboratorio5/imagen/Captura de pantalla 2024-09-13 184802.png)
 
 
