@@ -27,16 +27,10 @@ main.cpp : Es el principal donde se está el menú principal y se llaman las fun
     
 
 
-### Fotos programa  
+### Fotos programa  y gráfica
 
 
-
-![FotoProgra](.\imagen\Captura de pantalla 2024-09-13 183357.png)
-
-
-
-
-
+![FotoPrograma](.\image1.png)
 ![FotoGrafica](.\image.png)
 
 
