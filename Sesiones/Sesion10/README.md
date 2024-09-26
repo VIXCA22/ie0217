@@ -55,8 +55,7 @@ Ambas bibliotecas son opciones sólidas para la creación de **interfaces gráfi
 # Fotos de códigos en funcionamiento
 ---
 
-![foto1](.\Sesiones\Sesion10\imagenesSesion10\foto1.png)
-
+![foto1](imagenesSesion10\foto1.png)
 
 
 
