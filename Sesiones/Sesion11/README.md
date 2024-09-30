@@ -16,6 +16,8 @@
   - **Relacionales**: Organiza los datos en forma de tablas con filas y columnas. 
   - **No Relacionales**: Más flexibles, como bases de datos de documentos (por ejemplo, JSON), pares clave-valor, etc.
  
+## Creacion Bases
+![foto1](./imagenesSesion11/crearBase.png)
 
 
 ### Bases de datos relacionales
@@ -58,6 +60,11 @@ presentes en otra tabla como referencia.
 - **Clave compuesta**:Una combinación de dos o más columnas
 que identifican de manera única cada tupla en una tabla.
 
+## Representacion de Tablas
+![foto2](./imagenesSesion11/basessql.png)
+
+
+
 ### SQL (Structured Query Language):
 - **CRUD Operations**: Operaciones básicas realizadas en bases de datos:
   - **Create**: Crear bases de datos o tablas.
@@ -65,6 +72,10 @@ que identifican de manera única cada tupla en una tabla.
   - **Update**: Modificar registros.
   - **Delete**: Eliminar registros o tablas.
   
+## Comandos básicos
+![foto3](./imagenesSesion11/comandosCrear.jpg)
+
+
 ### Comandos SQL importantes:
 - **CREATE DATABASE**: Crea una base de datos.
 - **CREATE TABLE**: Crea una tabla.
@@ -94,6 +105,9 @@ que identifican de manera única cada tupla en una tabla.
   - **CAST**:Convierte un valor de dato a otro
   - **COALESCE**:Devuelve el primer valor no nulo en un lista.
   - **AS**: Crea un alias en una columna de forma virtual
+
+## Creacion Bases
+![foto4](./imagenesSesion11/comandosgenerales.png)
 
 ### Otras características:
 - **Indexes**: Mejoran la velocidad de las consultas.
