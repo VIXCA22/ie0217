@@ -16,7 +16,7 @@
   - **Relacionales**: Organiza los datos en forma de tablas con filas y columnas. 
   - **No Relacionales**: Más flexibles, como bases de datos de documentos (por ejemplo, JSON), pares clave-valor, etc.
  
-## Creacion Bases
+## Creacion Bases(ejemplo en MySQL)
 ![foto1](./imagenesSesion11/crearBase.png)
 
 
