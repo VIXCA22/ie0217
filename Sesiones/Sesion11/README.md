@@ -77,36 +77,37 @@ que identifican de manera única cada tupla en una tabla.
 
 
 ### Comandos SQL importantes:
+
 - **CREATE DATABASE**: Crea una base de datos.
 - **CREATE TABLE**: Crea una tabla.
-- **ALTER TABLE**: Modifica la estructura de una tabla (agregar, renombrar, eliminar columnas).
+- **ALTER TABLE**: Modifica la estructura de una tabla (agregar, renombrar,     eliminar columnas).
 - **SELECT**: Consulta para leer datos.
 - **INSERT INTO**: Inserta nuevas filas.
 - **UPDATE**: Modifica registros existentes.
 - **DELETE**: Elimina registros.
 - **JOINS**: Combina filas de dos tablas basándose en una columna común.
-  - **INNER JOIN**: Devuelve filas con valores coincidentes en ambas tablas.
-  - **LEFT JOIN / RIGHT JOIN**: Devuelve todas las filas de una tabla y las coincidentes de la otra.
-  - **FULL OUTER JOIN**: Devuelve todas las filas, haya coincidencias o no.
-  - **CROSS JOIN**: Combina filas de tablas sin una relación específica.
-  - **CREATE VIEW**:Muestra la tabla de forma virtual.
-  - **FROM**:Seleciona la tabla a la que se accederá.
-  - **Where**:Es un filtro de datos que delimita los datos los datos
-  - **GROUP BY**:Agrega los datos haciendo grupos
-  - **HAVING**:Filtra los resultados de los datos
-  - **ORDER BY**: Ordena resultados de una consulta
-  - **LIKE**:Encuentra patrones en los resultados de datos
-  - **AND**: Ambos criteros
-  - **OR**: Uno o otro criterio
-  - **CASE WHEN**: Similiar al condicional if-else
-  - **IN**:Verifica un valor específífico en una tabla
-  - **UNION ALL**:Combina datos de dos o mas consultas sin eliminar las filas duplicadas
-  - **BETWEEN**:En medio de dos terminos
-  - **CAST**:Convierte un valor de dato a otro
-  - **COALESCE**:Devuelve el primer valor no nulo en un lista.
-  - **AS**: Crea un alias en una columna de forma virtual
+- **INNER JOIN**: Devuelve filas con valores coincidentes en ambas tablas.
+- **LEFT JOIN / RIGHT JOIN**: Devuelve todas las filas de una tabla y las coincidentes de la otra.
+- **FULL OUTER JOIN**: Devuelve todas las filas, haya coincidencias o no.
+- **CROSS JOIN**: Combina filas de tablas sin una relación específica.
+- **CREATE VIEW**:Muestra la tabla de forma virtual.
+- **FROM**:Seleciona la tabla a la que se accederá.
+- **Where**:Es un filtro de datos que delimita los datos los datos
+- **GROUP BY**:Agrega los datos haciendo grupos
+- **HAVING**:Filtra los resultados de los datos
+- **ORDER BY**: Ordena resultados de una consulta
+- **LIKE**:Encuentra patrones en los resultados de datos
+- **AND**: Ambos criteros
+- **OR**: Uno o otro criterio
+- **CASE WHEN**: Similiar al condicional if-else
+- **IN**:Verifica un valor específífico en una tabla
+- **UNION ALL**:Combina datos de dos o mas consultas sin eliminar las filas duplicadas
+- **BETWEEN**:En medio de dos terminos
+- **CAST**:Convierte un valor de dato a otro
+- **COALESCE**:Devuelve el primer valor no nulo en un lista.
+- **AS**: Crea un alias en una columna de forma virtual
 
-## Creacion Bases
+## Comandos Generales
 ![foto4](./imagenesSesion11/comandosgenerales.png)
 
 ### Otras características:
