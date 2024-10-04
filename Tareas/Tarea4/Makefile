@@ -1,16 +1,22 @@
 CC = g++
 CFLAGS = -Wall
-TARGET1 = Implementaciones
 
-EXE_EXT = 
+# Nombres de los ejecutables
+TARGET1 = Implementaciones
+TARGET2 = Simulador
+
+# Extensión del ejecutable (dependiendo del sistema operativo)
+EXE_EXT =
 TARGET_DIR = build
 
-# Rutas de los archivos fuente y cabecera
+# Rutas de los archivos fuente y cabecera para ambos programas
 SRCS1 = src/main.cpp
-HEADERS = src/implementaciones.hpp
+SRCS2 = src/main2.cpp 
+HEADERS = src/implementaciones.hpp src/Tarea.hpp src/Proyecto.hpp
 
-# Ruta completa al ejecutable
+# Ruta completa a los ejecutables
 TARGET1_PATH := $(TARGET_DIR)/$(TARGET1)$(EXE_EXT)
+TARGET2_PATH := $(TARGET_DIR)/$(TARGET2)$(EXE_EXT)
 
 # Verificar si estamos en Windows
 ifeq ($(OS),Windows_NT)
@@ -18,14 +24,18 @@ ifeq ($(OS),Windows_NT)
     RM = cmd /c del /Q /F
     MKDIR = if not exist $(TARGET_DIR) mkdir $(TARGET_DIR)
 else
+    EXE_EXT =
     RM = rm -f
     MKDIR = mkdir -p $(TARGET_DIR)
 endif
 
-# Regla principal
-all: create_dir $(TARGET1_PATH) run
+# Regla para el primer programa (make)
+make: create_dir $(TARGET1_PATH) run1
 
-# Crear el directorio de construcción
+# Regla para el segundo programa (make2)
+make2: create_dir $(TARGET2_PATH) run2
+
+# Crear el directorio de construcción si no existe
 create_dir:
 	$(MKDIR)
 
@@ -33,10 +43,20 @@ create_dir:
 $(TARGET1_PATH): $(SRCS1) $(HEADERS)
 	$(CC) $(CFLAGS) -o $(TARGET1_PATH) $(SRCS1)
 
-# Ejecutar el programa
-run: $(TARGET1_PATH)
+# Compilar el segundo programa
+$(TARGET2_PATH): $(SRCS2) $(HEADERS)
+	$(CC) $(CFLAGS) -o $(TARGET2_PATH) $(SRCS2)
+
+# Ejecutar el primer programa
+run1: $(TARGET1_PATH)
+	@echo "Ejecutando $(TARGET1)..."
 	$(TARGET1_PATH)
 
-# Limpiar archivos generados
+# Ejecutar el segundo programa
+run2: $(TARGET2_PATH)
+	@echo "Ejecutando $(TARGET2)..."
+	$(TARGET2_PATH)
+
+# Limpiar los archivos generados
 clean:
-	$(RM) $(TARGET1_PATH)
+	$(RM) $(TARGET1_PATH) $(TARGET2_PATH)

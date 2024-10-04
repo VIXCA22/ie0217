@@ -56,6 +56,7 @@ double measure_sort_time(Func sort_function, vector<int>& data) {
 }
 
 int main() {
+   for (int i = 0; i < 10; i++) {
     try {
         // Tamaños de prueba
         vector<size_t> sizes = {5000, 10000, 50000, 100000, 200000, 400000}; 
@@ -106,6 +107,7 @@ int main() {
     } catch (const std::exception& e) {
         cerr << "Error: " << e.what() << endl;
     }
-
+ 
+   }
     return 0;
 }

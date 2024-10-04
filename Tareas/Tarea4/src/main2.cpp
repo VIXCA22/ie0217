@@ -5,11 +5,21 @@
 
 using namespace std;
 
+/**
+ * @file main2.cpp
+ * @brief El el main para gestionar la simulación del programa.
+ *
+ * El programa tiene como sentido que los usuarios puedan agregar, eliminar y gestionar tareas
+ * dentro de proyectos, además de  ordenar tareas y mostrar resúmenes de proyectos.
+ */
+
 int main() {
-    map<string, Proyecto<int>> proyectos; // Mapa que almacena proyectos por su nombre
-    int opcion;
+    // En map  almacena proyectos por su nombre
+    map<string, Proyecto<int>> proyectos; 
+    int opcion; 
 
     do {
+        // Menú de diferentes opciones
         cout << "1. Agregar un nuevo proyecto.\n";
         cout << "2. Agregar una tarea a un proyecto existente.\n";
         cout << "3. Eliminar una tarea de un proyecto.\n";
@@ -18,7 +28,7 @@ int main() {
         cout << "6. Eliminar un proyecto.\n";
         cout << "7. Salir del programa.\n";
         cout << "Seleccione una opción: ";
-        cin >> opcion;
+        cin >> opcion; 
 
         string nombre_proyecto, nombre_tarea;
         double costo, tiempo;
@@ -33,6 +43,7 @@ int main() {
             break;
 
         case 2:
+            // Agregar una tarea a un proyecto existente
             cout << "Ingrese el nombre del proyecto: ";
             cin.ignore();
             getline(cin, nombre_proyecto);
@@ -45,13 +56,13 @@ int main() {
                 cin >> tiempo;
                 cout << "Ingrese la prioridad de la tarea (1, 2, 3): ";
                 cin >> prioridad;
-                cout << "Ingrese la cantidad de  recursos necesarios: Cantidad Peones o Cantidad de materiales ";
+                cout << "Ingrese la cantidad de recursos necesarios: Cantidad de Peones o Cantidad de materiales: ";
                 cin >> recursos;
                 try {
                     // Agrega la nueva tarea al proyecto
                     proyectos[nombre_proyecto].agregar_tarea(Tarea<int>(nombre_tarea, costo, tiempo, prioridad, recursos));
                 } catch (const exception& e) {
-                    cout << "Error: " << e.what() << "\n";
+                    cout << "Error: " << e.what() << "\n"; // Muestra el error en caso de excepción
                 }
             } else {
                 cout << "Proyecto no encontrado.\n";
@@ -59,6 +70,7 @@ int main() {
             break;
 
         case 3:
+            // Eliminar una tarea de un proyecto
             cout << "Ingrese el nombre del proyecto: ";
             cin.ignore();
             getline(cin, nombre_proyecto);
@@ -70,7 +82,7 @@ int main() {
                     proyectos[nombre_proyecto].eliminar_tarea(nombre_tarea);
                     cout << "Tarea eliminada.\n";
                 } catch (const exception& e) {
-                    cout << "Error: " << e.what() << "\n";
+                    cout << "Error: " << e.what() << "\n"; // Muestra el error en caso de excepción
                 }
             } else {
                 cout << "Proyecto no encontrado.\n";
@@ -78,6 +90,7 @@ int main() {
             break;
 
         case 4:
+            // Ordenana las tareas por costo, tiempo o prioridad
             cout << "Ingrese el nombre del proyecto: ";
             cin.ignore();
             getline(cin, nombre_proyecto);
@@ -111,18 +124,19 @@ int main() {
             break;
 
         case 5:
+            // Muestra el resumen de un proyecto
             cout << "Ingrese el nombre del proyecto: ";
             cin.ignore();
             getline(cin, nombre_proyecto);
             if (proyectos.find(nombre_proyecto) != proyectos.end()) {
-                // Muestra el resumen del proyecto
-                proyectos[nombre_proyecto].mostrar_resumen_proyecto();
+                proyectos[nombre_proyecto].mostrar_resumen_proyecto(); // Muestra el resumen del proyecto
             } else {
                 cout << "Proyecto no encontrado.\n";
             }
             break;
 
         case 6:
+            // Elimina un proyecto
             cout << "Ingrese el nombre del proyecto a eliminar: ";
             cin.ignore();
             getline(cin, nombre_proyecto);
@@ -134,11 +148,11 @@ int main() {
             break;
 
         case 7:
-            cout << "Saliendo del programa.\n";
+            cout << "Saliendo del programa.\n"; 
             break;
 
         default:
-            cout << "Opción no válida.\n";
+            cout << "Opción no válida.\n"; 
             break;
         }
 
